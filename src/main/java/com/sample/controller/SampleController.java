@@ -23,33 +23,32 @@ public class SampleController {
 	private SampleService service;
 	
 	@PostMapping("/save")
-	public SampleModel postOnlineStore(@RequestBody SampleModel model) {
+	public SampleModel saveSample(@RequestBody SampleModel model) {
 		SampleModel models=	service.save(model);
 		return models;
 	}
 	
 	@GetMapping("/getAll")
-	public List<SampleModel> getOnlineStoreAll() {
+	public List<SampleModel> getSampleAll() {
 		List<SampleModel> data=service.getAllData();
 		return data;
 	}
 	
 	@GetMapping("/get/{id}")
-	public SampleModel getOnlineStore(@PathVariable Long id) {
+	public SampleModel getSample(@PathVariable Long id) {
 		SampleModel dataById=service.getById(id);
 		return dataById;
 	}
 	
 	@PutMapping("/update/{id}")
-	public SampleModel putOnlineStore(@RequestBody SampleModel model) {
+	public SampleModel putSample(@RequestBody SampleModel model) {
 		SampleModel updated=service.updateModel(model);
 		return updated;
 	}
 	
 	@DeleteMapping("/delete")
-	public SampleModel deleteOnlineStore(@PathVariable String id, @RequestBody SampleModel model) {
+	public SampleModel deleteSample(@PathVariable String id, @RequestBody SampleModel model) {
 		return model;
 	}
-	
 	
 }
