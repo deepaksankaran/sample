@@ -48,6 +48,7 @@ public class SampleController {
 	
 	@DeleteMapping("/delete")
 	public SampleModel deleteSample(@PathVariable String id, @RequestBody SampleModel model) {
+		
 		return model;
 	}
 	
