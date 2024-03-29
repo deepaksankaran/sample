@@ -27,7 +27,7 @@ public class SampleController {
 		SampleModel models=	service.save(model);
 		return models;
 	}
-	
+	//getAll
 	@GetMapping("/getAll")
 	public List<SampleModel> getSampleAll() {
 		List<SampleModel> data=service.getAllData();
